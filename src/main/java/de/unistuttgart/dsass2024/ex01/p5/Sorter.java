@@ -1,5 +1,7 @@
 package de.unistuttgart.dsass2024.ex01.p5;
 
+import com.sun.security.jgss.InquireType;
+
 public class Sorter {
 
     /**
@@ -11,8 +13,15 @@ public class Sorter {
      *             in the end
      */
     public static <T extends Comparable<T>> void selectionSort(ISimpleList<T> list) {
-            //test
-            //testen
+        int currentIndex = 0;
+
+        for (int i = currentIndex; i < list.getSize(); i++) {
+            int indexGap= 1;
+            for (int j = currentIndex + indexGap ; j < list.getSize(); j++) {
+
+
+            }
+        }
     }
 
     /**
