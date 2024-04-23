@@ -11,7 +11,8 @@ public class Sorter {
      *             in the end
      */
     public static <T extends Comparable<T>> void selectionSort(ISimpleList<T> list) {
-
+            //test
+            //testen
     }
 
     /**
