@@ -29,6 +29,7 @@ public class Sorter {
 
             list.swapElements(currentIndex,frontier);
             currentIndex++;
+
         }
     }
 
