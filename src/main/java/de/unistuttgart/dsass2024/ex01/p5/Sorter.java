@@ -41,6 +41,21 @@ public class Sorter {
      */
     public static <T extends Comparable<T>> void insertionSort(ISimpleList<T> list) {
 
+        //start with index 1 because the first element is assumed to be sorted
+        for (int i = 1; i < list.getSize(); i++) {
+            T currentElement = list.getElement(i);
+
+            int j = i - 1;  //we want to access the element left from the currentElement in order to compare them
+
+            // move the bigger Element to the left until there is no more
+            while (j >= 0 && currentElement.compareTo(list.getElement(j)) < 0) {
+
+                list.swapElements(j, j + 1);  // If currentElement is greater, elements are swapped. This moves the currentElement to the left,
+
+                // Decrement j to keep moving currentElement leftward through the sorted portion until it's correctly placed.
+                j--;
+            }
+        }
     }
 
     /**
