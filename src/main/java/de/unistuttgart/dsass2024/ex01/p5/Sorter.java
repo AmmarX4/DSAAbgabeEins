@@ -17,10 +17,18 @@ public class Sorter {
 
         for (int i = currentIndex; i < list.getSize(); i++) {
             int indexGap= 1;
-            for (int j = currentIndex + indexGap ; j < list.getSize(); j++) {
+            int frontier = currentIndex;
 
-
+            for (int j = frontier + indexGap ; j < list.getSize(); j++) {
+                if(list.getElement(frontier).compareTo(list.getElement(j))>0){
+                    indexGap++;
+                } else {
+                    frontier = j;
+                }
             }
+
+            list.swapElements(currentIndex,frontier);
+            currentIndex++;
         }
     }
 
