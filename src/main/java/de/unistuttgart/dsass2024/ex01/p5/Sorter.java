@@ -67,6 +67,21 @@ public class Sorter {
      *             in the end
      */
     public static <T extends Comparable<T>> void bubbleSort(ISimpleList<T> list) {
+        // this works like a flag that tracks whether a swap has occurred
+        boolean swapped = true;
 
+        while (swapped) {
+            //Assume no swaps will occur
+            swapped = false;
+            for (int i = 0; i < list.getSize() - 1; i++) {
+
+                if (list.getElement(i).compareTo(list.getElement(i + 1)) < 0) {
+                    list.swapElements(i, i + 1);
+                    swapped = true;
+
+                }
+            }
+
+        }
     }
 }
